@@ -16,7 +16,8 @@ val LIB_VERSION_IVY = "2.4.0"
 
 resolvers ++= Seq(
   "confluent" at "http://packages.confluent.io/maven/",
-  "conjars" at "http://conjars.org/repo/"
+  "conjars" at "http://conjars.org/repo/",
+  "cloudera" at "https://repository.cloudera.com/artifactory/cloudera-repos/"
 )
 
 libraryDependencies ++= Seq(
@@ -29,15 +30,6 @@ libraryDependencies ++= Seq(
   "ch.qos.logback" % "logback-classic" % LIB_VERSION_LOGBACK,
   "ch.qos.logback" % "logback-core" %  LIB_VERSION_LOGBACK,
   "org.apache.hadoop" % "hadoop-client" % LIB_VERSION_HADOOP,
-//  "org.apache.hadoop" % "hadoop-minijdc" % LIB_VERSION_HADOOP % "test",
-//  "org.apache.hadoop" % "minicluster" % LIB_VERSION_HADOOP % "test",
-  "org.apache.hive" % "hive-cli" % LIB_VERSION_HIVE % "compile",
-  "org.apache.hive" % "hive-exec" % LIB_VERSION_HIVE % "compile",
-  "org.apache.hive" % "hive-common" % LIB_VERSION_HIVE % "compile",
-//  "org.apache.hive" % "hive-hcatalog-core" % LIB_VERSION_HIVE % "compile",
-  "org.apache.parquet" % "parquet-hadoop-bundle" % "1.7.0",
-  "org.apache.parquet" % "parquet-avro" % "1.7.0",
-  "org.apache.parquet" % "parquet-column" % "1.7.0",
-  "org.apache.parquet" % "parquet-hadoop-bundle" % "1.7.0",
-  "org.apache.avro" % "avro-mapred" % "1.7.7"
+  "org.apache.hadoop" % "hadoop-minicluster" % LIB_VERSION_HADOOP % "test",
+  "org.apache.hadoop" % "hadoop-minikdc" % LIB_VERSION_HADOOP % "test"
 )
